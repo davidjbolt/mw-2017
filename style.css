@@ -102,7 +102,7 @@ body {
   list-style: none;
   float: left;
   display: block;
-  width: 33.33%;
+  width: calc(33.33% - (2rem/3));
   padding: 10px 25px 80px 25px;
 
 }
@@ -154,19 +154,31 @@ body {
   padding-bottom: 50px;
 }
 
-.meet figure {
+.meet img {
+  border-radius: 50%;
+}
+
+.meet li {
+  list-style: none;
+  display: inline-block;
+  width: calc(25% - (2rem/4));
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+/*.meet figure {
   float: left;
   width: 25% auto;
   margin-right: 2%;
   display: inline;
   text-align: center;
   margin-bottom: 1rem;
-}
+}*/
 
-.meet img {
+/*.meet img {
   border-radius: 50%;
   /*text-align: center;*/
-}
+}*/
 
 .meet-instructor {
   background-color: grey;
