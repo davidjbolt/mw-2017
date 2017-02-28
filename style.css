@@ -159,10 +159,10 @@ body {
 }
 
 .social-media {
-
+  display: none;
 }
 
-.meet li {
+.meet-list {
   list-style: none;
   display: inline-block;
   width: calc(25% - (2rem/4));
