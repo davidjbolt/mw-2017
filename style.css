@@ -60,14 +60,13 @@ body {
 .start-date::after {
   content: "";
   display: block;
-  padding-top: 65px;
   font-size: 40px;
-  background-image: url('images/divider.png');
+  background-image: url(img/divider.svg);
   background-repeat: no-repeat;
   background-position: center;
-  width: 100px;
-  margin: 30px auto 0;
-
+  width: 50px;
+  height: 40px;
+  margin: 50px auto 0;
 }
 
 .header {
@@ -144,6 +143,31 @@ body {
   overflow: hidden;
 }
 
+.social-link {
+  width: 18px;
+  height: 18px;
+  background-image: url(img/slice.png);
+  display: block;
+  float: left;
+  margin: 0 20px;
+}
+
+.social-tw {
+  background-position: 0px 0px;
+}
+
+.social-fb {
+  background-position: -35px 0px;
+}
+
+.social-li {
+  background-position: -105px 0px;
+}
+
+.meet li:nth-child(4n+1) {
+    clear: left;
+}
+
 .meet h1 {
   /*color: #444444;*/
   opacity: 100%;
@@ -159,19 +183,25 @@ body {
 }
 
 .social-media {
-  display: none;
+  display: block;
+float: left;
+text-indent: 100%;
+white-space: nowrap;
+overflow: hidden;
+list-style: none;
 }
 
 .meet-list {
   list-style: none;
-  display: inline-block;
+  display: block;
+  float: left;
   width: calc(25% - (2rem/4));
   text-align: center;
   padding-bottom: 2rem;
 }
 
 .meet-instructor {
-  background-color: grey;
+  background: url(img/instructor.jpg);
   clear: both;
   padding: 200px 0px 180px 0px;
 }
