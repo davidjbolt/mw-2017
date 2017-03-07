@@ -328,7 +328,7 @@ body {
 .signup {
   background-image: url("img/footer.jpg");
   clear: both;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -363,6 +363,7 @@ button {
 .footer {
   margin: 100px 0px 50px 0px;
   padding-bottom: 33px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .footer-image {
@@ -384,5 +385,7 @@ button {
   color: #FFFFFF;
   font-size: 14px;
   font-weight: 400;
+  margin: 0 auto;
+}
   margin: 0 auto;
 }
