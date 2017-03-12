@@ -235,13 +235,11 @@ body {
 
 .meet-instructor {
   background: url(img/instructor.jpg);
-  clear: both;
   padding: 200px 0px 180px 0px;
-  /* margin-bottom: 150px; */
-  height: 700px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 }
 
 .instructor-head {
