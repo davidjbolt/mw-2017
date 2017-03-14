@@ -21,8 +21,11 @@ body {
   margin-left: 28px;
   list-style: none; }
 
-select {
-  display: none; }
+.menu-bar {
+  height: 4em;
+  border: 1px solid blue;
+  float: right;
+  margin-right: 2em; }
 
 .nav-text a {
   color: #FFFFFF;
