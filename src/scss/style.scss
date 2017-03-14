@@ -31,6 +31,13 @@ body {
   list-style: none;
 }
 
+.menu-bar {
+  height: 4em;
+  border: 1px solid blue;
+  float: right;
+  margin-right: 2em;
+}
+
 .nav-text a {
   color: #FFFFFF;
   text-decoration: none;
@@ -66,7 +73,7 @@ body {
   content: "";
   display: block;
   font-size: 40px;
-  background-image: url(img/divider.svg);
+  background-image: url("img/divider.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 50px;
@@ -75,7 +82,7 @@ body {
 }
 
 .header {
-  background-image: url("images/hero.jpg");
+  background-image: url("img/hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -86,7 +93,8 @@ body {
   padding-bottom: 77px;
   width: 844px;
   text-align: center;
-  color: $light-gray;
+  color: #C3BFBF;
+  opacity: 100%;
   font-size: 32px;
   font-weight: 300;
 }
@@ -115,7 +123,7 @@ body {
 }
 
 .goals-header {
-  color: $dark-gray;
+  color: #777777;
   opacity: 100%;
   font-weight: 400;
   font-size: 28px;
@@ -125,7 +133,7 @@ body {
 }
 
 .goal-section-header {
-  color: $dark-gray;
+  color: #777777;
   opacity: 100%;
   font-weight: 600;
   font-size: 16px;
@@ -140,7 +148,7 @@ body {
 }
 /*meet the colearners section*/
 .meet {
-  background-color: $light-gray;
+  background-color: #f9f9f9;
   padding: 90px 0px 130px 0px;
   display: block;
   clear: both;
@@ -239,13 +247,11 @@ body {
 
 .meet-instructor {
   background: url(img/instructor.jpg);
-  clear: both;
   padding: 200px 0px 180px 0px;
-  /* margin-bottom: 150px; */
-  height: 700px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 }
 
 .instructor-head {
@@ -293,11 +299,11 @@ body {
 }
 
 .quote {
-  height: 630px;
+
 }
 
 .quote-quote {
-  color: $dark-red;
+  color: #E66244;
   font-size: 48px;
   font-weight: 100;
   line-height: 1.3em;
@@ -322,7 +328,7 @@ body {
 
 .quote-source {
   text-align: center;
-  margin-bottom: 110px
+  margin-bottom: 170px
 }
 
 .ruby {
@@ -331,7 +337,6 @@ body {
 
 .signup {
   background-image: url("img/footer.jpg");
-  clear: both;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -339,6 +344,7 @@ body {
 
 .times {
   padding-top: 140px;
+  display: inline-block;
 }
 
 .times p {
@@ -365,7 +371,7 @@ button {
 }
 
 .footer {
-  margin: 100px 0px 50px 0px;
+  margin-top: 100px;
   padding-bottom: 33px;
   padding-top: 60px;
   background-color: rgba(0, 0, 0, 0.2);

@@ -21,6 +21,9 @@ body {
   margin-left: 28px;
   list-style: none; }
 
+select {
+  display: none; }
+
 .nav-text a {
   color: #FFFFFF;
   text-decoration: none; }
@@ -52,7 +55,7 @@ body {
   content: "";
   display: block;
   font-size: 40px;
-  background-image: url(img/divider.svg);
+  background-image: url("img/divider.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 50px;
@@ -60,7 +63,7 @@ body {
   margin: 50px auto 0; }
 
 .header {
-  background-image: url("images/hero.jpg");
+  background-image: url("img/hero.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
 
@@ -71,6 +74,7 @@ body {
   width: 844px;
   text-align: center;
   color: #C3BFBF;
+  opacity: 100%;
   font-size: 32px;
   font-weight: 300; }
 
@@ -117,7 +121,7 @@ body {
 
 /*meet the colearners section*/
 .meet {
-  background-color: #C3BFBF;
+  background-color: #f9f9f9;
   padding: 90px 0px 130px 0px;
   display: block;
   clear: both;
@@ -202,13 +206,11 @@ body {
 
 .meet-instructor {
   background: url(img/instructor.jpg);
-  clear: both;
   padding: 200px 0px 180px 0px;
-  /* margin-bottom: 150px; */
-  height: 700px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  overflow: hidden; }
 
 .instructor-head {
   color: #FFFFFF;
@@ -250,9 +252,6 @@ body {
   width: 500px;
   clear: left; }
 
-.quote {
-  height: 630px; }
-
 .quote-quote {
   color: #E66244;
   font-size: 48px;
@@ -276,20 +275,20 @@ body {
 
 .quote-source {
   text-align: center;
-  margin-bottom: 110px; }
+  margin-bottom: 170px; }
 
 .ruby {
   text-decoration: underline; }
 
 .signup {
   background-image: url("img/footer.jpg");
-  clear: both;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover; }
 
 .times {
-  padding-top: 140px; }
+  padding-top: 140px;
+  display: inline-block; }
 
 .times p {
   color: #FFFFFF;
@@ -312,7 +311,7 @@ button {
   bottom: 240px; }
 
 .footer {
-  margin: 100px 0px 50px 0px;
+  margin-top: 100px;
   padding-bottom: 33px;
   padding-top: 60px;
   background-color: rgba(0, 0, 0, 0.2); }

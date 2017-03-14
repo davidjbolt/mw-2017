@@ -31,6 +31,30 @@ body {
   text-decoration: none;
 }
 
+/*.menu {
+  display: none;
+}*/
+
+@media (max-width: 899px) {
+  .nav-text a {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .menu-bar {
+    display: none;
+  }
+}
+
+.menu-bar {
+  height: 4em;
+  border: 1px solid blue;
+  float: right;
+  margin-right: 2em;
+  margin-top: 3em;
+}
+
 .course-header {
   clear: both;
   margin: 0 auto;
@@ -70,7 +94,7 @@ body {
 }
 
 .header {
-  background-image: url("images/hero.jpg");
+  background-image: url(img/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -91,7 +115,7 @@ body {
   content: "";
   display: block;
   height: 32px;
-  background-image: url('images/divider.png');
+  background-image: url(img/divider.png);
   background-repeat: no-repeat;
   background-position: center;
   margin: 75px;
@@ -325,7 +349,6 @@ body {
 
 .signup {
   background-image: url("img/footer.jpg");
-  clear: both;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -333,6 +356,7 @@ body {
 
 .times {
   padding-top: 140px;
+  display: inline-block;
 }
 
 .times p {
@@ -359,7 +383,7 @@ button {
 }
 
 .footer {
-  margin: 100px 0px 50px 0px;
+  margin-top: 100px;
   padding-bottom: 33px;
   padding-top: 60px;
   background-color: rgba(0, 0, 0, 0.2);
