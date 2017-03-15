@@ -42,7 +42,7 @@ body {
 }
 
 @media (min-width: 900px) {
-  .menu-bar {
+  .hamburger {
     display: none;
   }
 }

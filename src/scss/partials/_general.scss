@@ -25,11 +25,24 @@ body {
   list-style: none;
 }
 
-.menu-bar {
+@media (max-width: 899px) {
+  .nav-text  {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.hamburger {
   height: 4em;
   border: 1px solid blue;
   float: right;
   margin-right: 2em;
+  margin-top: 3em;
 }
 
 .nav-text a {
