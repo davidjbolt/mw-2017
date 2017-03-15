@@ -1,0 +1,37 @@
+.course-goals li {
+  list-style: none;
+  float: left;
+  display: block;
+  width: calc(33.33% - (2rem/3));
+  padding: 10px 25px 80px 25px;
+
+}
+
+.goals-list li:nth-child(3n+1) {
+    clear: left;
+}
+
+.goals-header {
+  color: $dark-gray;
+  opacity: 100%;
+  font-weight: 400;
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+.goal-section-header {
+  color: $dark-gray;
+  opacity: 100%;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.goal-text {
+  color: $dark-gray;
+  opacity: 100%;
+  font-size: 16px;
+  font-weight: 400;
+}
