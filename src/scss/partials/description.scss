@@ -2,12 +2,16 @@
   margin: 0 auto;
   padding-top: 150px;
   padding-bottom: 77px;
-  width: 844px;
-  text-align: center;
-  color: $light-gray;
-  opacity: 100%;
-  font-size: 32px;
-  font-weight: 300;
+
+
+       p {
+        text-align: center;
+        color: #C3BFBF;
+        font-size: 2rem;
+        font-weight: 300;
+        margin: 0 3rem;
+        line-height: 1.8;
+      }
 }
 
 .course-description::after {

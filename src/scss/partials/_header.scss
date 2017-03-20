@@ -37,7 +37,7 @@
 }
 
 .nav-text a {
-  color: #FFFFFF;
+  color: $white;
   text-decoration: none;
 }
 
@@ -49,31 +49,28 @@
 }
 
 .course-name-header {
-  color: #FFFFFF;
-  font-size: 92px;
+  color: $white;
+  font-size: 6rem;
   font-weight: 100;
   margin-bottom: 2rem;
 }
 
 .start-date {
-  color: #FFFFFF;
-  font-size: 24px;
+  color: $white;
+  font-size: 1.7rem;
   font-weight: 300;
   padding-bottom: 300px;
-  display: block;
-  line-height: 1px;
 }
 
 .start-date::after {
   content: "";
   display: block;
-  font-size: 40px;
-  background-image: url("../img/divider.svg");
+  background-image: url(../img/divider.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 50px;
-  height: 40px;
-  margin: 50px auto 0;
+  height: 2em;
+  margin: .7em auto;
 }
 
 .header {
