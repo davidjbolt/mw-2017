@@ -64,7 +64,7 @@ body {
   background-position: center;
   width: 50px;
   height: 2em;
-  margin: .7em auto; }
+  margin: .9em auto; }
 
 .header {
   background-image: url("../img/hero.jpg");
@@ -87,10 +87,20 @@ body {
   content: "";
   display: block;
   height: 32px;
-  background-image: url("../img/divider.png");
+  background-image: url(../img/divider.png);
   background-repeat: no-repeat;
   background-position: center;
-  margin: 75px; }
+  margin-top: 75px; }
+
+.course-goals {
+  margin-top: 50px; }
+  .course-goals h1 {
+    color: #777777;
+    font-weight: 400;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 65px; }
 
 .course-goals li {
   list-style: none;
@@ -98,31 +108,18 @@ body {
   display: block;
   width: calc(33.33% - (2rem/3));
   padding: 10px 25px 80px 25px; }
+  .course-goals li h2 {
+    color: #777777;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-transform: uppercase; }
+  .course-goals li p {
+    color: #777777;
+    font-size: 1rem;
+    font-weight: 300; }
 
 .goals-list li:nth-child(3n+1) {
   clear: left; }
-
-.goals-header {
-  color: #777777;
-  opacity: 100%;
-  font-weight: 400;
-  font-size: 28px;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 65px; }
-
-.goal-section-header {
-  color: #777777;
-  opacity: 100%;
-  font-weight: 600;
-  font-size: 16px;
-  text-transform: uppercase; }
-
-.goal-text {
-  color: #777777;
-  opacity: 100%;
-  font-size: 16px;
-  font-weight: 400; }
 
 .meet {
   background-color: #f9f9f9;

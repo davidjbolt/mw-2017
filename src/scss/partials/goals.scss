@@ -1,3 +1,17 @@
+.course-goals {
+  margin-top: 50px;
+
+      h1 {
+       color: $dark-gray;
+       font-weight: 400;
+       font-size: 2rem;
+       text-transform: uppercase;
+       text-align: center;
+       margin-bottom: 65px
+     }
+}
+
+
 .course-goals li {
   list-style: none;
   float: left;
@@ -5,33 +19,21 @@
   width: calc(33.33% - (2rem/3));
   padding: 10px 25px 80px 25px;
 
+      h2 {
+        color: $dark-gray;
+        font-weight: 600;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+      }
+
+
+      p {
+        color: $dark-gray;
+        font-size: 1rem;
+        font-weight: 300;
+      }
 }
 
 .goals-list li:nth-child(3n+1) {
-    clear: left;
-}
-
-.goals-header {
-  color: $dark-gray;
-  opacity: 100%;
-  font-weight: 400;
-  font-size: 28px;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 65px;
-}
-
-.goal-section-header {
-  color: $dark-gray;
-  opacity: 100%;
-  font-weight: 600;
-  font-size: 16px;
-  text-transform: uppercase;
-}
-
-.goal-text {
-  color: $dark-gray;
-  opacity: 100%;
-  font-size: 16px;
-  font-weight: 400;
+  clear: left;
 }
