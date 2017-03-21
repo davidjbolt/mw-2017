@@ -11,14 +11,16 @@ body {
 .nav-text {
   float: right;
   margin: 35px 35px 0px 35px; }
-
-.nav-text li {
-  font-weight: 500;
-  font-size: 18px;
-  text-transform: uppercase;
-  float: left;
-  margin-left: 28px;
-  list-style: none; }
+  .nav-text li {
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    float: left;
+    margin-left: 28px;
+    list-style: none; }
+  .nav-text a {
+    color: #FFFFFF;
+    text-decoration: none; }
 
 @media (max-width: 899px) {
   .nav-text {
@@ -34,27 +36,21 @@ body {
   margin-right: 2em;
   margin-top: 3em; }
 
-.nav-text a {
-  color: #FFFFFF;
-  text-decoration: none; }
-
 .course-header {
   clear: both;
   margin: 0 auto;
   text-align: center;
   padding-top: 100px; }
-
-.course-name-header {
-  color: #FFFFFF;
-  font-size: 6rem;
-  font-weight: 100;
-  margin-bottom: 2rem; }
-
-.start-date {
-  color: #FFFFFF;
-  font-size: 1.7rem;
-  font-weight: 300;
-  padding-bottom: 300px; }
+  .course-header h1 {
+    color: #FFFFFF;
+    font-size: 6rem;
+    font-weight: 100;
+    margin-bottom: 2rem; }
+  .course-header p {
+    color: #FFFFFF;
+    font-size: 1.7rem;
+    font-weight: 300;
+    padding-bottom: 300px; }
 
 .start-date::after {
   content: "";
@@ -102,24 +98,43 @@ body {
     text-align: center;
     margin-bottom: 65px; }
 
-.course-goals li {
-  list-style: none;
-  float: left;
-  display: block;
-  width: calc(33.33% - (2rem/3));
-  padding: 10px 25px 80px 25px; }
-  .course-goals li h2 {
-    color: #777777;
-    font-weight: 600;
-    font-size: 1.3rem;
-    text-transform: uppercase; }
-  .course-goals li p {
-    color: #777777;
-    font-size: 1rem;
-    font-weight: 300; }
+@media (min-width: 960px) {
+  .course-goals li {
+    list-style: none;
+    float: left;
+    display: block;
+    width: calc(33.33% - (2rem/3));
+    padding: 10px 25px 80px 25px; }
+    .course-goals li h2 {
+      color: #777777;
+      font-weight: 600;
+      font-size: 1.3rem;
+      text-transform: uppercase; }
+    .course-goals li p {
+      color: #777777;
+      font-size: 1rem;
+      font-weight: 300; }
+  .goals-list li:nth-child(3n+1) {
+    clear: left; } }
 
-.goals-list li:nth-child(3n+1) {
-  clear: left; }
+@media (max-width: 959px) {
+  .course-goals li {
+    list-style: none;
+    float: left;
+    display: block;
+    width: calc(50% - (2rem/2));
+    padding: 10px 25px 80px 25px; }
+    .course-goals li h2 {
+      color: #777777;
+      font-weight: 600;
+      font-size: 1.3rem;
+      text-transform: uppercase; }
+    .course-goals li p {
+      color: #777777;
+      font-size: 1rem;
+      font-weight: 300; }
+  .goals-list li:nth-child(2n+1) {
+    clear: left; } }
 
 .meet {
   background-color: #f9f9f9;
