@@ -1,18 +1,36 @@
-// include gulp
 var gulp = require('gulp');
-// include gulp-sass plugin
 var sass = require('gulp-sass');
-// first gulp task, completely useless (=
-gulp.task('holla', function() {
-  console.log('YO');
-});
-// gulp sass function, compiler, also useless
+var minifycss = require('gulp-minify-css');
+var browserSync = require('browser-sync').create();
+var plumber = require('gulp-plumber');
+var notifier = require('node-notifier');
+var notify = require('gulp-notify');
+
 gulp.task('sass', function() {
     return gulp.src('src/scss/style.scss')
-        .pipe(sass())
-        .pipe(gulp.dest('assets/css'));
+        .pipe(plumber())
+        .pipe(sass()
+            .on("error", notify.onError({
+                  title: "Sass Error",
+                  message: "Error: <%= error.message %>"
+              }))
+      )
+        .pipe(minifycss())
+        .pipe(gulp.dest('assets/css'))
+        .pipe(browserSync.stream());
 });
-// watch for any change in these folders and run task
-gulp.task('default', function() {
+
+//default task
+gulp.task('default', ['sass', 'browser-sync'], function() {
     gulp.watch(['src/scss/*', 'src/scss/**/*'], ['sass']);
+    gulp.watch('*.html').on('change', browserSync.reload);
+});
+
+// BrowserSync server
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
 });
