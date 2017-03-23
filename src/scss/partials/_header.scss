@@ -5,7 +5,12 @@
 
 .nav-text {
   float: right;
+  @include list-reset;
+  @include clearfix;
   margin: 35px 35px 0px 35px;
+  @include max-down(899px) {
+    display: none;
+  }
 
       li {
         font-weight: 500;
@@ -13,7 +18,7 @@
         text-transform: uppercase;
         float: left;
         margin-left: 28px;
-        list-style: none;
+
       }
 
       a {
@@ -22,23 +27,20 @@
       }
 }
 
-@media (max-width: 899px) {
-  .nav-text  {
-    display: none;
-  }
-}
-
-@media (min-width: 900px) {
-  .hamburger {
-    display: none;
-  }
-}
+// @media (max-width: 899px) {
+//   .nav-text  {
+//     display: none;
+//   }
+// }
 
 .hamburger {
   height: 4em;
   float: right;
   margin-right: 2em;
   margin-top: 3em;
+  @include min-up(900px) {
+    display: none;
+  }
 }
 
 .course-header {
@@ -48,6 +50,7 @@
   padding-top: 100px;
 
       h1 {
+        // @include vertical-align;
         color: $white;
         font-size: 6rem;
         font-weight: 100;

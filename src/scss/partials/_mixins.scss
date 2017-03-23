@@ -1,0 +1,46 @@
+//vertical centering
+@mixin vertical-align($val: 47%) {
+
+	// unset
+	@if $val == 'none' {
+	    top: auto;
+      -webkit-transform: none;
+         -moz-transform: none;
+          -ms-transform: none;
+              transform: none;
+
+   	} @else {
+        position: relative;
+        top: $val;
+        -webkit-transform: translateY(-50%);
+           -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+   	}
+}
+//ul/ol reset
+@mixin list-reset {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+//clearfix
+@mixin clearfix() {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+//media queries
+@mixin min-up($min) {
+	@media only screen and (min-width: $min) { @content; }
+}
+
+@mixin max-down($max) {
+	@media only screen and (max-width: $max) { @content; }
+}
+
+@mixin min-max($min, $max) {
+	@media only screen and (min-width: $min) and (max-width: $max) { @content; }
+}

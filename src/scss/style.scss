@@ -5,6 +5,7 @@ $white: #FFFFFF;
 $gray-mid: #f9f9f9;
 // $roboto-medium:
 @import "partials/normalize";
+@import "partials/mixins";
 @import "partials/general";
 @import "partials/header";
 @import "partials/description";
