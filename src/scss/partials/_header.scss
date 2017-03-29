@@ -3,14 +3,98 @@
   margin: 18px 34px;
 }
 
-.nav-text {
-  float: right;
-  @include list-reset;
-  @include clearfix;
-  margin: 35px 35px 0px 35px;
-  @include max-down(899px) {
+.menu-btn {
+	position: absolute;
+	top: 0.75rem;
+	right: 1.25rem;
+	z-index: 9999;
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 41px;
+	height: 36px;
+	border: none;
+	background: none;
+	outline: none;
+	cursor: pointer;
+
+  // Hidden at larger screen
+  @include min-up($nav-switch) {
     display: none;
   }
+
+	span {
+    @include hide-text;
+		position: relative;
+		top: 0;
+		margin: 0 auto;
+		width: 30px;
+		height: 3px;
+		background: #FFF;
+		overflow: hidden;
+		opacity: 1;
+		transition: all 0.1s ease-out;
+
+		.nav-shown & {
+			opacity: 0;
+			transform: scale(0);
+		}
+	}
+
+	&::before, &::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		width: 30px;
+		height: 3px;
+		background: #FFF;
+		transition: all 0.1s ease-out;
+	}
+
+	&::before {
+		top: 8px;
+
+		.nav-shown & {
+			top: 18px;
+			transform: rotate(135deg);
+		}
+	}
+
+	&::after {
+		bottom: 7px;
+
+		.nav-shown & {
+			bottom: 15px;
+			transform: rotate(-135deg);
+		}
+	}
+}
+
+.nav {
+  @include clearfix;
+  float: right;
+  margin: 35px 35px 0px 35px;
+  @include max-down(899px) {
+  display: none;
+  }
+      .nav-shown & {
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        display: block;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.85);
+        transition: all 0.25s ease-out;
+      }
+}
+
+.nav-text {
+  @include list-reset;
+  @include clearfix;
 
       li {
         font-weight: 500;
@@ -25,22 +109,6 @@
         color: $white;
         text-decoration: none;
       }
-}
-
-// @media (max-width: 899px) {
-//   .nav-text  {
-//     display: none;
-//   }
-// }
-
-.hamburger {
-  height: 4em;
-  float: right;
-  margin-right: 2em;
-  margin-top: 3em;
-  @include min-up(900px) {
-    display: none;
-  }
 }
 
 .course-header {

@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var minifycss = require('gulp-minify-css');
+var uglify = require('gulp-uglify');
 var browserSync = require('browser-sync').create();
 var plumber = require('gulp-plumber');
 var notifier = require('node-notifier');
@@ -33,4 +34,10 @@ gulp.task('browser-sync', function() {
             baseDir: "./"
         }
     });
+});
+
+gulp.task('compress', function() {
+    return gulp.src('src/js/lib/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('assets/js/lib/'));
 });
