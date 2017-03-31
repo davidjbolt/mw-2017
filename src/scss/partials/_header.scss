@@ -15,7 +15,7 @@
 	height: 36px;
 	border: none;
 	background: none;
-	outline: none;
+	outline: 4px solid white;
 	cursor: pointer;
 
   // Hidden at larger screen
@@ -74,50 +74,117 @@
 
 .nav {
   @include clearfix;
-  float: right;
-  margin: 35px 35px 0px 35px;
-  @include max-down(899px) {
-  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+  z-index: -1;
+
+  // JS button adds/removes this class
+  .nav-shown & {
+    opacity: 1;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.85);
+    transition: all 0.35s ease-out;
   }
-      .nav-shown & {
-        opacity: 1;
-        position: absolute;
-        top: 0;
-        display: block;
-        margin: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.85);
-        transition: all 0.25s ease-out;
-      }
+
+  @include min-up($nav-switch) {
+    position: static;
+    opacity: 1;
+    padding: 2rem;
+    width: auto;
+    background-color: transparent !important; // make sure this overrides the .nav-shown class
+  }
 }
 
-.nav-text {
-  @include list-reset;
+.nav-list {
   @include clearfix;
+  @include list-reset;
+  @include vertical-align();
+  margin: 0 auto;
 
-      li {
-        font-weight: 500;
-        font-size: 18px;
-        text-transform: uppercase;
-        float: left;
-        margin-left: 28px;
+  @include min-up($nav-switch) {
+      @include vertical-align('none');
+      float: right;
+  }
 
-      }
+  li {
+    display: block;
+    margin: 4rem;
+    text-align: center;
 
-      a {
-        color: $white;
-        text-decoration: none;
-      }
+    @include min-up($nav-switch) {
+      float: left;
+      margin: 0 1rem;
+    }
+  }
+
+  a {
+    display: inline-block;
+    font-family: $roboto;
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #FFF;
+
+    @include min-up($nav-switch) {
+      font-size: 1rem;
+    }
+  }
 }
+// .nav {
+//   @include clearfix;
+//   float: right;
+//   margin: 35px 35px 0px 35px;
+//   @include max-down(899px) {
+//   display: none;
+//   }
+//       .nav-shown & {
+//         opacity: 1;
+//         position: absolute;
+//         top: 0;
+//         display: block;
+//         margin: 0;
+//         width: 100%;
+//         height: 100%;
+//         background-color: rgba(0,0,0,0.85);
+//         transition: all 0.25s ease-out;
+//       }
+// }
+//
+// .nav-text {
+//   @include list-reset;
+//   @include clearfix;
+//
+//       li {
+//         font-weight: 500;
+//         font-size: 18px;
+//         text-transform: uppercase;
+//         float: left;
+//         margin-left: 28px;
+//
+//       }
+//
+//       a {
+//         color: $white;
+//         text-decoration: none;
+//       }
+// }
 
-.course-header {
+.title-wrap {
+  // @include vertical-align();
+  // position: absolute;
+  // width: 100%;
   clear: both;
   margin: 0 auto;
   text-align: center;
   padding-top: 100px;
 
-      h1 {
+      .title-text {
         // @include vertical-align;
         color: $white;
         font-size: 6rem;
@@ -145,6 +212,7 @@
 }
 
 .header {
+  position: relative;
   background-image: url("../img/hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;

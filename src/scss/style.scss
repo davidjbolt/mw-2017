@@ -4,8 +4,9 @@ $dark-red: #E66244;
 $white: #FFFFFF;
 $gray-mid: #f9f9f9;
 $color-orange: #E66244;
-$nav-switch: 900px;
-// $roboto-medium:
+$nav-switch: 768px;
+$roboto: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 @import "partials/normalize";
 @import "partials/mixins";
 @import "partials/general";
