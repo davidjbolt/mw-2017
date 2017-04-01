@@ -13,19 +13,19 @@
     <section class="header">
       <header>
         <a href="#"><img class="nav-image" src="assets/img/factory-logo.png" style="width:157px; height:100px;" alt="The Factory Logo"></a>
-        <nav class="nav-header">
-          <ul class="nav-text">
+        <nav class="nav">
+          <ul class="nav-list">
             <li><a class="nav-link" href="#">Description</a></li>
             <li><a class="nav-link" href="#">Colearners</a></li>
             <li><a class="nav-link" href="#">Instructor</a></li>
             <li><a class="nav-link" href="#">Sign Up</a></li>
           </ul>
-          <a class="menu" href="#menu"><img class="hamburger" src="assets/img/menu-white.svg" alt="menu"></a>
         </nav>
+        <button class="menu-btn js-menu-btn"><span>Menu</span></button>
       </header>
-      <section class="course-header">
-          <h1 class="course-name-header">Modern Web</h1>
-          <span class="start-date">Starting <abbr title="January">Jan.</abbr> 2017</span>
+      <section class="title-wrap">
+          <h1 class="title-text">Modern Web</h1>
+          <p class="start-date">Starting <abbr title="January">Jan.</abbr> 2017</p>
       </section>
     </section>
 
@@ -34,31 +34,31 @@
     </section>
 
     <section class="course-goals">
-      <h1 class="goals-header">Course Goals</h1>
+      <h1>Course Goals</h1>
       <ul class="goals-list">
         <li>
-          <h2 class="goal-section-header">SEMANTIC HMTL</h2>
-          <p class="goal-text">You’ll learn how to structure your pages using the minimum elements necessary. With an eye on semantics, you’ll also learn how new HTML5 elements describe a page’s structure more clearly and concisely to the browser and assistive technologies.</p>
+          <h2>SEMANTIC HMTL</h2>
+          <p>You’ll learn how to structure your pages using the minimum elements necessary. With an eye on semantics, you’ll also learn how new HTML5 elements describe a page’s structure more clearly and concisely to the browser and assistive technologies.</p>
         </li>
         <li>
-          <h2 class="goal-section-header">CSS</h2>
-          <p class="goal-text">CSS3 and modern browsers have given us a whole new set of tools. You’ll learn some best practices for writing CSS and how to mindfully take advantage of new properties to create beautiful layouts.</p>
+          <h2>CSS</h2>
+          <p>CSS3 and modern browsers have given us a whole new set of tools. You’ll learn some best practices for writing CSS and how to mindfully take advantage of new properties to create beautiful layouts.</p>
         </li>
         <li>
-          <h2 class="goal-section-header">SASS</h2>
-          <p class="goal-text">You’ll learn why front end developers love CSS preprocessors like SASS. By extending CSS with familiar programming mainstays like variables, functions, and equations, SASS has reinvented the workflow of writing CSS.</p>
+          <h2>SASS</h2>
+          <p>You’ll learn why front end developers love CSS preprocessors like SASS. By extending CSS with familiar programming mainstays like variables, functions, and equations, SASS has reinvented the workflow of writing CSS.</p>
         </li>
         <li>
-          <h2 class="goal-section-header">RESPONSIVE DESIGN</h2>
-          <p class="goal-text">The goal of responsive design is to provide the best experience on every device. We’ll discuss the best way to set breakpoints and how to make sure your images look great and load fast.</p>
+          <h2>RESPONSIVE DESIGN</h2>
+          <p>The goal of responsive design is to provide the best experience on every device. We’ll discuss the best way to set breakpoints and how to make sure your images look great and load fast.</p>
         </li>
         <li>
-          <h2 class="goal-section-header">JAVASCRIPT / JQUERY</h2>
-          <p class="goal-text">You'll learn how javascript and jquery can provide necessary interaction for your sites and what frameworks and libraries are essential tools for the modern front-end developer.</p>
+          <h2>JAVASCRIPT / JQUERY</h2>
+          <p>You'll learn how javascript and jquery can provide necessary interaction for your sites and what frameworks and libraries are essential tools for the modern front-end developer.</p>
         </li>
         <li>
-          <h2 class="goal-section-header">VERSION CONTROL &amp; TASK AUTOMATORS</h2>
-          <p class="goal-text">Get up and running with Git. You'll learn how to integrate version control into your workflow and how to contribute to a code repository. You'll also learn the power of task automators.</p>
+          <h2>VERSION CONTROL &amp; TASK AUTOMATORS</h2>
+          <p>Get up and running with Git. You'll learn how to integrate version control into your workflow and how to contribute to a code repository. You'll also learn the power of task automators.</p>
         </li>
       </ul>
     </section>
@@ -209,7 +209,7 @@
         <p class="size-cost">Cost: $800</p>
       </article>
       <aside class="button">
-        <button type="submit" name="button">SIGN UP</button>
+        <button class="signup-button" type="submit" name="button">SIGN UP</button>
       </aside>
       <footer class="footer">
         <a href="http://workthefactory.com/"><img class="footer-image" src="assets/img/factory-logo.png" style="width:100px; height:64px;" alt="The Factory Logo"></a>
@@ -218,5 +218,7 @@
         </article>
       </footer>
     </section>
+    <script type="text/javascript" src="assets/js/lib/modernizr.js"></script>
+    <script type="text/javascript" src="assets/js/lib/whatever.js"></script>
 </body>
 </html>

@@ -21,7 +21,7 @@
   margin: 30px 0px 0px 90px !important;
 }
 
-button {
+.signup-button {
   font-size: 30px;
   float: right;
   margin-right: 100px;
@@ -31,8 +31,12 @@ button {
   color: #FFFFFF;
   position: relative;
   bottom: 240px;
-}
 
+    @include max-down(899px) {
+      bottom: 100px;
+      right: 150px;
+    }
+}
 .footer {
   margin-top: 100px;
   padding-bottom: 33px;

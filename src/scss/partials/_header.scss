@@ -3,83 +3,216 @@
   margin: 18px 34px;
 }
 
-.nav-text {
-  float: right;
-  margin: 35px 35px 0px 35px;
-}
+.menu-btn {
+	position: absolute;
+	top: 0.75rem;
+	right: 1.25rem;
+	z-index: 9999;
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 41px;
+	height: 36px;
+	border: none;
+	background: none;
+	outline: 4px solid white;
+	cursor: pointer;
 
-.nav-text li {
-  font-weight: 500;
-  font-size: 18px;
-  text-transform: uppercase;
-  float: left;
-  margin-left: 28px;
-  list-style: none;
-}
-
-@media (max-width: 899px) {
-  .nav-text  {
+  // Hidden at larger screen
+  @include min-up($nav-switch) {
     display: none;
+  }
+
+	span {
+    @include hide-text;
+		position: relative;
+		top: 0;
+		margin: 0 auto;
+		width: 30px;
+		height: 3px;
+		background: #FFF;
+		overflow: hidden;
+		opacity: 1;
+		transition: all 0.1s ease-out;
+
+		.nav-shown & {
+			opacity: 0;
+			transform: scale(0);
+		}
+	}
+
+	&::before, &::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		width: 30px;
+		height: 3px;
+		background: #FFF;
+		transition: all 0.1s ease-out;
+	}
+
+	&::before {
+		top: 8px;
+
+		.nav-shown & {
+			top: 18px;
+			transform: rotate(135deg);
+		}
+	}
+
+	&::after {
+		bottom: 7px;
+
+		.nav-shown & {
+			bottom: 15px;
+			transform: rotate(-135deg);
+		}
+	}
+}
+
+.nav {
+  @include clearfix;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+  z-index: -1;
+
+  // JS button adds/removes this class
+  .nav-shown & {
+    opacity: 1;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.85);
+    transition: all 0.35s ease-out;
+  }
+
+  @include min-up($nav-switch) {
+    position: static;
+    opacity: 1;
+    padding: 2rem;
+    width: auto;
+    background-color: transparent !important; // make sure this overrides the .nav-shown class
   }
 }
 
-@media (min-width: 900px) {
-  .hamburger {
-    display: none;
+.nav-list {
+  @include clearfix;
+  @include list-reset;
+  @include vertical-align();
+  margin: 0 auto;
+
+  @include min-up($nav-switch) {
+      @include vertical-align('none');
+      float: right;
+  }
+
+  li {
+    display: block;
+    margin: 4rem;
+    text-align: center;
+
+    @include min-up($nav-switch) {
+      float: left;
+      margin: 0 1rem;
+    }
+  }
+
+  a {
+    display: inline-block;
+    font-family: $roboto;
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #FFF;
+
+    @include min-up($nav-switch) {
+      font-size: 1rem;
+    }
   }
 }
+// .nav {
+//   @include clearfix;
+//   float: right;
+//   margin: 35px 35px 0px 35px;
+//   @include max-down(899px) {
+//   display: none;
+//   }
+//       .nav-shown & {
+//         opacity: 1;
+//         position: absolute;
+//         top: 0;
+//         display: block;
+//         margin: 0;
+//         width: 100%;
+//         height: 100%;
+//         background-color: rgba(0,0,0,0.85);
+//         transition: all 0.25s ease-out;
+//       }
+// }
+//
+// .nav-text {
+//   @include list-reset;
+//   @include clearfix;
+//
+//       li {
+//         font-weight: 500;
+//         font-size: 18px;
+//         text-transform: uppercase;
+//         float: left;
+//         margin-left: 28px;
+//
+//       }
+//
+//       a {
+//         color: $white;
+//         text-decoration: none;
+//       }
+// }
 
-.hamburger {
-  height: 4em;
-  float: right;
-  margin-right: 2em;
-  margin-top: 3em;
-}
-
-.nav-text a {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-
-.course-header {
+.title-wrap {
+  // @include vertical-align();
+  // position: absolute;
+  // width: 100%;
   clear: both;
   margin: 0 auto;
   text-align: center;
   padding-top: 100px;
-}
 
-.course-name-header {
-  color: #FFFFFF;
-  opacity: 100%;
-  font-size: 92px;
-  font-weight: 100;
-  display: block;
-  line-height: 5px;
-}
+      .title-text {
+        // @include vertical-align;
+        color: $white;
+        font-size: 6rem;
+        font-weight: 100;
+        margin-bottom: 2rem;
+      }
 
-.start-date {
-  color: #FFFFFF;
-  font-size: 24px;
-  opacity: 100%;
-  font-weight: 300;
-  padding-bottom: 300px;
-  display: block;
-  line-height: 1px;
+      p {
+        color: $white;
+        font-size: 1.7rem;
+        font-weight: 300;
+        padding-bottom: 300px;
+      }
 }
 
 .start-date::after {
   content: "";
   display: block;
-  font-size: 40px;
-  background-image: url("../img/divider.svg");
+  background-image: url(../img/divider.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 50px;
-  height: 40px;
-  margin: 50px auto 0;
+  height: 2em;
+  margin: .9em auto;
 }
 
 .header {
+  position: relative;
   background-image: url("../img/hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;

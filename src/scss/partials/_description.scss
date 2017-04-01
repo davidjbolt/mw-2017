@@ -1,0 +1,25 @@
+.course-description {
+  margin: 0 auto;
+  padding-top: 150px;
+  padding-bottom: 77px;
+
+
+       p {
+        text-align: center;
+        color: #C3BFBF;
+        font-size: 2rem;
+        font-weight: 300;
+        margin: 0 5rem;
+        line-height: 1.8;
+      }
+}
+
+.course-description::after {
+  content: "";
+  display: block;
+  height: 32px;
+  background-image: url(../img/divider.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 75px;
+}

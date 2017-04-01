@@ -1,0 +1,138 @@
+.course-goals {
+  margin-top: 50px;
+
+      h1 {
+       color: $dark-gray;
+       font-weight: 400;
+       font-size: 2rem;
+       text-transform: uppercase;
+       text-align: center;
+       margin-bottom: 4rem;
+     }
+
+}
+
+.course-goals li {
+  @include list-reset;
+  @include clearfix;
+  float: left;
+  width: calc(33.33% - 1rem);
+  padding: 10px 25px 80px 25px;
+
+      h2 {
+        color: $dark-gray;
+        font-weight: 600;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+      }
+
+      p {
+        color: $dark-gray;
+        font-size: 1rem;
+        font-weight: 300;
+      }
+
+      &:nth-child(3n+1) {
+        clear: left;
+      }
+
+          @include max-down(959px) {
+            width: calc(50% - 1rem);
+
+              &:nth-child(2n+1) {
+                clear: left;
+            }
+          }
+          @include max-down(600px) {
+            margin-left: 9rem;
+            padding: 1rem 0;
+            @include vertical-align;
+            @include clearfix;
+              &:first-child {
+                margin-top: 7rem;
+            }}
+
+
+}
+
+// @media (max-width: 540px) {
+// .course-goals li {
+//   list-style: none;
+//   float: left;
+//   display: block;
+//   width: 100%;
+//   padding: 10px 25px 80px 25px;
+//
+//       h2 {
+//         color: $dark-gray;
+//         font-weight: 600;
+//         font-size: 1.3rem;
+//         text-transform: uppercase;
+//       }
+//
+//
+//       p {
+//         color: $dark-gray;
+//         font-size: 1rem;
+//         font-weight: 300;
+//       }
+// }
+//
+// // .goals-list li:nth-child(2n+1) {
+// //   clear: left;
+// // }
+// }
+//
+// @media (min-width: 960px) {
+// .course-goals li {
+//   list-style: none;
+//   float: left;
+//   display: block;
+//   width: calc(33.33% - (2rem/3));
+//   padding: 10px 25px 80px 25px;
+//
+//       h2 {
+//         color: $dark-gray;
+//         font-weight: 600;
+//         font-size: 1.3rem;
+//         text-transform: uppercase;
+//       }
+//
+//
+//       p {
+//         color: $dark-gray;
+//         font-size: 1rem;
+//         font-weight: 300;
+//       }
+// }
+//
+// .goals-list li:nth-child(3n+1) {
+//   clear: left;
+// }}
+//
+// @media (max-width: 959px) {
+// .course-goals li {
+//   list-style: none;
+//   float: left;
+//   display: block;
+//   width: calc(50% - (2rem/2));
+//   padding: 10px 25px 80px 25px;
+//
+//       h2 {
+//         color: $dark-gray;
+//         font-weight: 600;
+//         font-size: 1.3rem;
+//         text-transform: uppercase;
+//       }
+//
+//
+//       p {
+//         color: $dark-gray;
+//         font-size: 1rem;
+//         font-weight: 300;
+//       }
+// }
+//
+// .goals-list li:nth-child(2n+1) {
+//   clear: left;
+// }}
