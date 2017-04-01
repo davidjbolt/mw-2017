@@ -47,96 +47,10 @@
           }
 
           @include max-down(600px) {
-            margin-left: 9rem;
-            padding: 1rem 0;
-            @include vertical-align;
-            @include clearfix;
-
-              &:first-child {
-                margin-top: 7rem;
-                // clear: left;
-              }
+            margin: 0 4rem;
+            width: calc(100% - 10rem);
+            text-align: left;
+            // @include vertical-align;
+            // @include clearfix;
           }
 }
-
-// @media (max-width: 540px) {
-// .course-goals li {
-//   list-style: none;
-//   float: left;
-//   display: block;
-//   width: 100%;
-//   padding: 10px 25px 80px 25px;
-//
-//       h2 {
-//         color: $dark-gray;
-//         font-weight: 600;
-//         font-size: 1.3rem;
-//         text-transform: uppercase;
-//       }
-//
-//
-//       p {
-//         color: $dark-gray;
-//         font-size: 1rem;
-//         font-weight: 300;
-//       }
-// }
-//
-// // .goals-list li:nth-child(2n+1) {
-// //   clear: left;
-// // }
-// }
-//
-// @media (min-width: 960px) {
-// .course-goals li {
-//   list-style: none;
-//   float: left;
-//   display: block;
-//   width: calc(33.33% - (2rem/3));
-//   padding: 10px 25px 80px 25px;
-//
-//       h2 {
-//         color: $dark-gray;
-//         font-weight: 600;
-//         font-size: 1.3rem;
-//         text-transform: uppercase;
-//       }
-//
-//
-//       p {
-//         color: $dark-gray;
-//         font-size: 1rem;
-//         font-weight: 300;
-//       }
-// }
-//
-// .goals-list li:nth-child(3n+1) {
-//   clear: left;
-// }}
-//
-// @media (max-width: 959px) {
-// .course-goals li {
-//   list-style: none;
-//   float: left;
-//   display: block;
-//   width: calc(50% - (2rem/2));
-//   padding: 10px 25px 80px 25px;
-//
-//       h2 {
-//         color: $dark-gray;
-//         font-weight: 600;
-//         font-size: 1.3rem;
-//         text-transform: uppercase;
-//       }
-//
-//
-//       p {
-//         color: $dark-gray;
-//         font-size: 1rem;
-//         font-weight: 300;
-//       }
-// }
-//
-// .goals-list li:nth-child(2n+1) {
-//   clear: left;
-// }}
