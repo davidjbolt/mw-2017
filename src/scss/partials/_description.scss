@@ -6,7 +6,7 @@
 
        p {
         text-align: center;
-        color: #C3BFBF;
+        color: $light-gray;
         font-size: 2rem;
         font-weight: 300;
         margin: 0 5rem;
@@ -17,9 +17,9 @@
 .course-description::after {
   content: "";
   display: block;
-  height: 32px;
+  height: 2rem;
   background-image: url(../img/divider.png);
   background-repeat: no-repeat;
   background-position: center;
-  margin-top: 75px;
+  margin-top: 4rem;
 }
