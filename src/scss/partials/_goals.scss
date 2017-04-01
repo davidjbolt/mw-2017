@@ -1,5 +1,5 @@
 .course-goals {
-  margin-top: 50px;
+  margin-top: 4rem;
 
       h1 {
        color: $dark-gray;
@@ -18,16 +18,15 @@
   float: left;
   width: calc(33.33% - 1rem);
   padding: 10px 25px 80px 25px;
+  color: $dark-gray;
 
       h2 {
-        color: $dark-gray;
         font-weight: 600;
         font-size: 1.3rem;
         text-transform: uppercase;
       }
 
       p {
-        color: $dark-gray;
         font-size: 1rem;
         font-weight: 300;
       }
@@ -36,23 +35,28 @@
         clear: left;
       }
 
-          @include max-down(959px) {
+          @include max-down(960px) {
             width: calc(50% - 1rem);
 
               &:nth-child(2n+1) {
                 clear: left;
-            }
+              }
+              &:nth-child(3n+1) {
+                clear: none;
+              }
           }
+
           @include max-down(600px) {
             margin-left: 9rem;
             padding: 1rem 0;
             @include vertical-align;
             @include clearfix;
+
               &:first-child {
                 margin-top: 7rem;
-            }}
-
-
+                // clear: left;
+              }
+          }
 }
 
 // @media (max-width: 540px) {
