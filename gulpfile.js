@@ -21,9 +21,10 @@ gulp.task('sass', function() {
         .pipe(browserSync.stream());
 });
 
-//default task
-gulp.task('default', ['sass', 'browser-sync'], function() {
+//default gulp task
+gulp.task('default', ['sass', 'compress', 'browser-sync'], function() {
     gulp.watch(['src/scss/*', 'src/scss/**/*'], ['sass']);
+    gulp.watch(['src/javascript/*', 'src/javascript/**/*'], ['compress']);
     gulp.watch('*.html').on('change', browserSync.reload);
 });
 
@@ -35,9 +36,13 @@ gulp.task('browser-sync', function() {
         }
     });
 });
-
+// JS uglify
 gulp.task('compress', function() {
-    return gulp.src('src/js/lib/*.js')
+    return gulp.src('src/js/main.js')
         .pipe(uglify())
-        .pipe(gulp.dest('assets/js/lib/'));
+        .on("error", notify.onError( {
+          title: "JS Error",
+          message: "Error: <%= error.message %>"
+        }))
+        .pipe(gulp.dest('assets/js/'));
 });

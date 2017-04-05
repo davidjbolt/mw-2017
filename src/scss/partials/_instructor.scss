@@ -37,4 +37,8 @@
 .jeremy p {
   font-size: 20px;
   font-weight: 300;
+  width: 500px;
+    @include max-down(640px) {
+      width: 350px;
+    };
 }
