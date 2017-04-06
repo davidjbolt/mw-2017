@@ -15,7 +15,7 @@
 	height: 36px;
 	border: none;
 	background: none;
-	outline: 4px solid white;
+  outline: none;
 	cursor: pointer;
 
   // Hidden at larger screen
@@ -136,44 +136,6 @@
     }
   }
 }
-// .nav {
-//   @include clearfix;
-//   float: right;
-//   margin: 35px 35px 0px 35px;
-//   @include max-down(899px) {
-//   display: none;
-//   }
-//       .nav-shown & {
-//         opacity: 1;
-//         position: absolute;
-//         top: 0;
-//         display: block;
-//         margin: 0;
-//         width: 100%;
-//         height: 100%;
-//         background-color: rgba(0,0,0,0.85);
-//         transition: all 0.25s ease-out;
-//       }
-// }
-//
-// .nav-text {
-//   @include list-reset;
-//   @include clearfix;
-//
-//       li {
-//         font-weight: 500;
-//         font-size: 18px;
-//         text-transform: uppercase;
-//         float: left;
-//         margin-left: 28px;
-//
-//       }
-//
-//       a {
-//         color: $white;
-//         text-decoration: none;
-//       }
-// }
 
 .title-wrap {
   // @include vertical-align();

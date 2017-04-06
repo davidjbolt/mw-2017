@@ -81,7 +81,6 @@
   overflow: hidden;
   padding: 0;
   width: 100%;
-  /* background: rebeccapurple; */
 }
 
 .social-media > li {
@@ -89,13 +88,13 @@
 }
 
 .meet-list {
-  /* list-style: none; */
-  /* display: inline-block; */
-  /* float: left; */
-  /* width: calc(20rem - (2rem/4)); */
   text-align: center;
   padding-bottom: 2rem;
   flex: auto;
   flex-wrap: wrap;
+  /* list-style: none; */
+  /* display: inline-block; */
+  /* float: left; */
+  /* width: calc(20rem - (2rem/4)); */
   /* max-width: 50%; */
 }
