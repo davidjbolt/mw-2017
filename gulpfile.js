@@ -24,8 +24,8 @@ gulp.task('sass', function() {
 //default gulp task
 gulp.task('default', ['sass', 'compress', 'browser-sync'], function() {
     gulp.watch(['src/scss/*', 'src/scss/**/*'], ['sass']);
-    gulp.watch(['src/javascript/*', 'src/javascript/**/*'], ['compress']);
-    gulp.watch('*.html').on('change', browserSync.reload);
+    gulp.watch(['src/js/**/*'], ['compress']);
+    gulp.watch(['*.html', 'assets/**']).on('change', browserSync.reload);
 });
 
 // BrowserSync server
