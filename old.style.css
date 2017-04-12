@@ -1,3 +1,5 @@
+/*old css file before switching to sass, no longer needed, hold for reference*/
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
