@@ -138,16 +138,12 @@
 }
 
 .title-wrap {
-  // @include vertical-align();
-  // position: absolute;
-  // width: 100%;
   clear: both;
   margin: 0 auto;
   text-align: center;
   padding-top: 100px;
 
       .title-text {
-        // @include vertical-align;
         color: $white;
         font-size: 6rem;
         font-weight: 100;

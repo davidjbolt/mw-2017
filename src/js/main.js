@@ -5,7 +5,7 @@ var showNav = false;
 // applies menu overlay on click of hamburger menu
 respondToNavClicks(menuBtn);
 
-// attempting to remove overlay on click of nav item
+// remove overlay and jump to nav section
 navLinks.forEach(respondToNavClicks);
 
 function respondToNavClicks (node) {
