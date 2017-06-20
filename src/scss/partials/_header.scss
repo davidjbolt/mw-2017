@@ -83,7 +83,7 @@
   opacity: 0;
   z-index: -1;
 
-  // JS button adds/removes this class
+  // JS adds/removes this class
   .nav-shown & {
     opacity: 1;
     z-index: 999;
